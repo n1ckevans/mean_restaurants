@@ -1,0 +1,17 @@
+<p *ngIf="errorMsg">{{ errorMsg }}</p>
+<form *ngIf="restaurantToEdit !== null" (submit)="handleSubmit()">
+  <div>
+    <label>Restaurant Name </label>
+    <input type="text" name="name" [(ngModel)]="restaurantToEdit.name">
+  </div>
+  <div>
+    <label>Cuisine </label>
+    <input type="text" name="cuisine" [(ngModel)]="restaurantToEdit.cuisine">
+  </div>
+    <button type="button" (click)="handleCancel()">
+    Cancel
+  </button>
+  <button>
+    Edit
+  </button>
+</form>

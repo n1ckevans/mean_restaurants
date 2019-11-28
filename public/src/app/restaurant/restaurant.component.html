@@ -1,0 +1,26 @@
+<p>
+    <a [routerLink] = "['review']"> New review</a>
+  </p>
+  
+  <hr>
+  <h1>Reviews for {{ thisRestaurant.name }} </h1>
+  <table>
+  <thead>
+    <tr>
+      <th class="my-4 mx-4"> Customer </th>
+      <br>
+      <th class="my-4 mx-4"> Stars </th>
+      <br>
+      <th class="my-4 mx-4"> Description </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let review of thisRestaurant.reviews | orderBy">
+      <td class="my-4 mx-4 mr-3"> {{ review.customer }}  <br></td>
+      <br>
+      <td class="my-4 mx-4"> {{ review.rating  }} </td>
+      <br>
+      <td class="my-4 mx-4"> {{ review.description }} </td>
+    </tr>
+  </tbody>
+  </table>

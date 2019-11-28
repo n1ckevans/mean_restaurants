@@ -1,0 +1,23 @@
+<h3>Register a restaurant</h3>
+<div>
+  <p *ngFor="let error of errors" class="error">
+    {{ error }}
+  </p>
+</div>
+
+<form (submit)="handleSubmit()">
+  <div>
+    <label>Restaurant Name </label>
+    <input type="text" name="name" [(ngModel)]="newRestaurant.name">
+  </div>
+  <div>
+    <label>Cuisine </label>
+    <input type="text" name="cuisine" [(ngModel)]="newRestaurant.cuisine">
+  </div>
+   <button type="button" (click)="handleCancel()">
+    Cancel
+  </button>
+  <button>
+    Register
+  </button>
+</form>
